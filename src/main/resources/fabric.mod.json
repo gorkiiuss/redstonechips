@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "redstonechips",
+	"version": "${version}",
+	"name": "Redstone Chips",
+	"description": "Redstone Chips allows players to create advanced electronic circuits with redstone.",
+	"authors": [
+		"gorkiiuss"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/gorkiiuss/redstonechips"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/redstonechips/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.github.gorkiiuss.redstonechips.RedstoneChips"
+		],
+		"client": [
+			"com.github.gorkiiuss.redstonechips.RedstoneChipsClient"
+		]
+	},
+	"mixins": [
+		"redstonechips.mixins.json",
+		{
+			"config": "redstonechips.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
